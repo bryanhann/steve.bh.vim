@@ -1,4 +1,6 @@
-
+"--source the script that supports plug functionality
+source ~/.config/vim/lib/plug.vim
+"
 "----suppress an annoying warning
 let g:go_version_warning = 0
 

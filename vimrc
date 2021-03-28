@@ -36,6 +36,5 @@ set nocompatible
 " continues beyond the right of the screen
     set listchars+=precedes:<
 
-
-source ~/.config/vim/source.vim/plugins.vim
-source ~/.config/vim/source.vim/amix.vim
+source ~/.config/vim/lib/myplugs.vim
+source ~/.config/vim/lib/amix.vim

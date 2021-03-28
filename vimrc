@@ -1,18 +1,22 @@
 set nocompatible
 
-source ~/.config/vim/mysource/amix
-
-" Enable folding
+"----FOLDING
 set foldmethod=indent
 set foldlevel=99
+"# enable folding with the spacebar
+nnoremap <space> za 
 
-" Enable folding with the spacebar
-nnoremap <space> za
-
-" make the folding nicer
-" Plugin 'tmhedberg/SimpylFold'
-" Flagging Unnecessary Whitespace
-"       au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
-
+"----MISC
 set encoding=utf-8
 set path+=**
+let python_highlight_all=1
+syntax on
+
+"----LOAD AMIX MODULES
+source ~/.config/vim/mysource/amix
+
+
+
+
+
+

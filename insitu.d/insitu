@@ -1,0 +1,12 @@
+#!/bin/sh
+# for syntax only. do not make executable.
+
+_export () { export $1=$2; }
+
+_export BCH_VIM_CONFIG  ${PWD}
+_export AMIX_SRC        https://github.com/amix/vimrc.git 
+_export AMIX_DST        ${BCH_VIM_CONFIG}/vim_runtime
+
+[ -d ${AMIX_DST} ] || git clone ${AMIX_SRC} ${AMIX_DST}
+
+export VIMINIT='let $MYVIMRC="${BCH_VIM_CONFIG}/vimrc" | source $MYVIMRC'

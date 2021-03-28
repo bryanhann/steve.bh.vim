@@ -1,11 +1,18 @@
-set runtimepath+=~/.config/vim/vim_runtime
+set nocompatible
 
-source ~/.config/vim/vim_runtime/vimrcs/basic.vim
-source ~/.config/vim/vim_runtime/vimrcs/filetypes.vim
-source ~/.config/vim/vim_runtime/vimrcs/plugins_config.vim
-source ~/.config/vim/vim_runtime/vimrcs/extended.vim
+source ~/.config/vim/mysource/amix
 
-try
-source ~/.config/vim/vim_runtime/my_configs.vim
-catch
-endtry
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+
+" Enable folding with the spacebar
+nnoremap <space> za
+
+" make the folding nicer
+" Plugin 'tmhedberg/SimpylFold'
+" Flagging Unnecessary Whitespace
+"       au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+set encoding=utf-8
+set path+=**

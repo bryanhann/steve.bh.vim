@@ -38,3 +38,4 @@ set nocompatible
 
 source ~/.config/vim/lib/myplugs.vim
 source ~/.config/vim/lib/amix.vim
+source ~/.config/vim/lib/Vjot.vim

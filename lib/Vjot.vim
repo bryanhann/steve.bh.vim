@@ -8,12 +8,7 @@ endfunction
 
 function PlayJot()
     let stamp = GetFirstWordOnLine()
-    let file = stamp . ".ws852.mp3"
-    execute "!beep4stamp " . stamp
-    " execute "!vjot-play-name " . file . " &"
-    " silent execute "!vjot-play-name " . file . " &"
-    " silent execute "!safe-afplay " . file . " &"
-    " #silent execute "!./vjot.play " . file . " &"
+    silent execute "!bch-vjot beep4stamp " . stamp 
 endfunction
 
 map  ,,v      :call PlayJot()<CR>:redraw!<CR>

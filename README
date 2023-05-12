@@ -1,5 +1,0 @@
-To activate, execute [source ./insitu.d/insity] from within
-this directory.
-
-As of writing this, this repo only works if installed to
-[~/.config.vim].

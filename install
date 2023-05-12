@@ -1,0 +1,18 @@
+#!/bin/bash
+
+export HERE=$(dirname $0)
+export PROXY=${HOME}/.vim
+
+install_amix () {
+    SRC=https://github.com/amix/vimrc.git
+    DST=${HERE}/vim_runtime
+    [ -d ${DST} ] || git clone ${SRC} ${DST}
+}
+
+link_to_home () {
+    rm ${PROXY}
+    ln -s ${HERE} ${PROXY}
+}
+
+install_amix
+link_to_home

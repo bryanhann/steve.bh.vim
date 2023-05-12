@@ -1,18 +1,22 @@
 #!/bin/bash
 
+[ "${0:0:1}" == "/" ] || {
+    echo "[$0]: must be called with fully qualified path name"
+    exit
+}
+
+echo "[$0] [$*]"
+
 export HERE=$(dirname $0)
 export PROXY=${HOME}/.vim
 
-install_amix () {
-    SRC=https://github.com/amix/vimrc.git
-    DST=${HERE}/vim_runtime
-    [ -d ${DST} ] || git clone ${SRC} ${DST}
-}
+# CLONE AMIX
 
-link_to_home () {
-    rm ${PROXY}
-    ln -s ${HERE} ${PROXY}
-}
+SRC=https://github.com/amix/vimrc.git
+DST=${HERE}/vim_runtime
+[ -d ${DST} ] || git clone ${SRC} ${DST}
 
-install_amix
-link_to_home
+# LINK
+
+rm ${PROXY}
+ln -s ${HERE} ${PROXY}

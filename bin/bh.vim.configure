@@ -1,11 +1,19 @@
 #!/bin/bash
+#doc Install to ~/.vim
+#doc
+#doc Installing creates a symbolic link ~/.vim -> REPO/dot.vim
+#doc where REPO is the root of this repository. Installing also
+#doc creates a transient [REPO/dot.vim/runtime] and installs the
+#doc following plugins:
+#doc    AMIX
+
 
 [ "${0:0:1}" == "/" ] || {
     echo "[$0]: must be called with fully qualified path name" >&2
     exit
 }
 
-export HERE=$(dirname $0)
+export HERE=$(dirname $(dirname $0))/dot.vim
 export PROXY=${HOME}/.vim
 
 # CLONE AMIX

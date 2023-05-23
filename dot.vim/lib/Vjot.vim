@@ -8,7 +8,7 @@ endfunction
 
 function PlayJot()
     let stamp = GetFirstWordOnLine()
-    silent execute "!bch.vjot.beep4stamp " . stamp 
+    silent execute "!bh.vjot play4stamp " . stamp
 endfunction
 
 map  ,,v      :call PlayJot()<CR>:redraw!<CR>
